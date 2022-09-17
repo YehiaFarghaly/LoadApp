@@ -9,3 +9,5 @@
 5) Using Intents for notification navigation between activities
 6) Dawing Canvas
 ```
+
+## Screenshots:
