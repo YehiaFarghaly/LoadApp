@@ -19,6 +19,9 @@ class LoadingButton @JvmOverloads constructor(
     private var progessCircle = 0f
     private var progressRectangle = 0f
     private var text: String = "Download"
+    private val backgroundColor = ResourcesCompat.getColor(resources, R.color.yellow, null)
+    private val loadingColor = ResourcesCompat.getColor(resources, R.color.colorAccent, null)
+    private val textColor = ResourcesCompat.getColor(resources, R.color.black, null)
     private var valueAnimator = ValueAnimator()
 
     var buttonState: ButtonState by Delegates.observable<ButtonState>(ButtonState.Completed) { p, old, new ->
@@ -59,15 +62,15 @@ class LoadingButton @JvmOverloads constructor(
     }
 
     private val paintButton = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = ResourcesCompat.getColor(resources, R.color.yellow, null)
+        color = backgroundColor
     }
     private val paintText = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = ResourcesCompat.getColor(resources, R.color.black, null)
+        color = textColor
         typeface = Typeface.create("Arial", Typeface.BOLD)
         textSize = resources.getDimension(R.dimen.default_text_size)
     }
     private val paintLoading = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = ResourcesCompat.getColor(resources, R.color.colorAccent, null)
+        color = loadingColor
     }
     private val paintCircle = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         color = ResourcesCompat.getColor(resources, R.color.purple, null)

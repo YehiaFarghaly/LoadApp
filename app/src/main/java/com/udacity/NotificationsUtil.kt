@@ -39,10 +39,12 @@ fun NotificationManager.sendNotification(
     ).setSmallIcon(R.drawable.download)
         .setContentTitle("LoadApp")
         .setContentText("Your Download Status")
-        .setContentIntent(pendingIntent)
-        .setAutoCancel(true)
         .setLargeIcon(bitmap)
-
+        .addAction(
+            R.drawable.download,
+            "Show details",
+            pendingIntent
+        )
     notify(NOTIFICATION_ID, builder.build())
 }
 
