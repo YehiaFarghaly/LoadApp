@@ -5,9 +5,11 @@
 1) Sending Notifications.
 2) Using Animations.
 3) Creating Custom View.
-4) Using Download Manager to download online file
-5) Using Intents for notification navigation between activities
-6) Dawing Canvas
+4) Using Download Manager to download online files.
+5) Using Intents for notification navigation between activities.
+6) Drawing Canvas.
+7) Using MotionLayout.
+
 ```
 
 ## Screenshots:
